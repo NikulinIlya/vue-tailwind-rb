@@ -10,26 +10,22 @@
       <selectable-plan plan-name="Hobby"
                        plan-gigs="1"
                        plan-dollars="5"
-                       :active-plan="activePlan"
-                       @onUpdatePlan="updateActivePlan">
+                       v-model="activePlan">
       </selectable-plan>
       <selectable-plan plan-name="Growth"
                        plan-gigs="5"
                        plan-dollars="10"
-                       :active-plan="activePlan"
-                       @onUpdatePlan="updateActivePlan">
+                       v-model="activePlan">
       </selectable-plan>
       <selectable-plan plan-name="Business"
                        plan-gigs="10"
                        plan-dollars="15"
-                       :active-plan="activePlan"
-                       @onUpdatePlan="updateActivePlan">
+                       v-model="activePlan">
       </selectable-plan>
       <selectable-plan plan-name="Enterprise"
                        plan-gigs="20"
                        plan-dollars="20"
-                       :active-plan="activePlan"
-                       @onUpdatePlan="updateActivePlan">
+                       v-model="activePlan">
       </selectable-plan>
     </div>
     <input type="radio" id="one" value="One" v-model="picked">
@@ -49,18 +45,13 @@ import './assets/css/main.css'
 export default {
   name: 'app',
   components: {
-      SelectablePlan
+    SelectablePlan
   },
   data() {
-      return {
-          picked: 'Two',
-          activePlan: '',
-      }
-  },
-  methods: {
-      updateActivePlan(plan) {
-          this.activePlan = plan;
-      }
+    return {
+        picked: 'Two',
+        activePlan: '',
+    }
   }
 }
 </script>

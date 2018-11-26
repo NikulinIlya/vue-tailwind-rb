@@ -32,6 +32,10 @@
 
 <script>
     export default {
+        model: {
+            prop: 'activePlan',
+            event: 'onUpdatePlan'
+        },
         props: ['planName', 'planGigs', 'planDollars', 'activePlan'],
         methods: {
             updateActivePlan(){
